@@ -156,6 +156,7 @@ app                    组装、导航、AppGraph（唯一知道引擎实现的�
 | [android-toolbox-architecture.md](android-toolbox-architecture.md) | 架构方案：模块划分、接口设计、能力分层 |
 | [ui-design-spec.md](ui-design-spec.md) | 设计规范：色彩、字阶、组件、动效 |
 | [m4a-to-mp4-remux-research.md](m4a-to-mp4-remux-research.md) | 技术调研：容器原理、开源选型、决策矩阵 |
+| [HANDOVER.md](HANDOVER.md) | 交接文档：环境、验证证据、待办、踩坑清单 |
 
 ---
 
