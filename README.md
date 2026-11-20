@@ -11,6 +11,7 @@
 ![Compose](https://img.shields.io/badge/Compose-BOM%202024.12-4285F4)
 ![FFmpeg](https://img.shields.io/badge/FFmpeg-not%20used-1E4B3D)
 ![Size](https://img.shields.io/badge/APK-~26MB-17170F)
+![Android CI](https://github.com/chenxiao-reverie/MyToolbox/actions/workflows/android.yml/badge.svg)
 
 <img src="samples/diary-card.png" width="300" alt="图片日记卡片">
 
@@ -166,4 +167,6 @@ app                    组装、导航、AppGraph（唯一知道引擎实现的�
 
 ## 许可
 
-本仓库暂未附加开源许可证，代码仅供个人学习与参考。如需引用请先联系作者。
+[MIT](LICENSE) © 2026 chenxiao-reverie
+
+打包的 6 套字库遵循各自的 SIL OFL 许可（霞鹜文楷 · 屏幕阅读版、马善政、站酷快乐、龙藏、志莽、思源宋体），版权归各字体作者所有。
