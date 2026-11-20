@@ -10,7 +10,7 @@
 ![Kotlin](https://img.shields.io/badge/Kotlin-2.0.21-7F52FF?logo=kotlin&logoColor=white)
 ![Compose](https://img.shields.io/badge/Compose-BOM%202024.12-4285F4)
 ![FFmpeg](https://img.shields.io/badge/FFmpeg-not%20used-1E4B3D)
-![Size](https://img.shields.io/badge/APK-~10MB-17170F)
+![Size](https://img.shields.io/badge/APK-~26MB-17170F)
 
 <img src="samples/diary-card.png" width="300" alt="图片日记卡片">
 
@@ -27,7 +27,7 @@
 | **转成 MP4** | m4a → mp4 | 只改 `ftyp` 品牌字节，媒体数据零改动 |
 | **转成 M4A** | 视频 → 纯音轨 | MediaExtractor → MediaMuxer 样本透传 |
 | **无损裁剪** | 按时间区间截取 | 删样本 + 时间戳前移，不解码 |
-| **图片日记** | 照片 + 一句话 → 卡片 | Canvas 直绘，1200px PNG 导出 |
+| **图片日记** | 照片 + 一句话 → 卡片 | Canvas 直绘，6 种字体 / 6 种比例 / 自定义留白与配色 |
 
 ---
 
@@ -121,7 +121,7 @@ app                    组装、导航、AppGraph（唯一知道引擎实现的�
 | 兜底重封装 | 51,403 B | 50,539 B | 品牌不可改写时重建容器，音质不变 |
 | 视频 → m4a | 173,780 B / 2 轨 | 44,140 B / 1 轨 | 只保留音频轨，`ftyp=M4A` |
 | 无损裁剪 | 5.00 s | 2.018 s | 误差 18 ms，不足一个 AAC 帧 |
-| 图片日记 | — | 1200 × 1600 PNG | 照片 contain 不裁切 |
+| 图片日记 | — | 1200 × 1600 PNG | 照片 contain 不裁切，6 套字体按需切换 |
 | 中断恢复 | 转换中 `force-stop` | 重启后自动重跑完成 | Room 持久化 + 启动复位 |
 
 ---
@@ -130,7 +130,7 @@ app                    组装、导航、AppGraph（唯一知道引擎实现的�
 
 - **批量处理** —— 多选文件、整批入队、逐项进度（当前一次只能选一个）
 - **分享入口补齐** —— 音频/视频、多文件（图片已支持）
-- **图片日记补齐** —— 留白滑杆、自定义配色、预设保存
+- **图片日记** —— 已补齐留白滑杆、自定义配色、预设保存、6 套字体
 - **真转码** —— 音频转 MP3/FLAC、视频压缩（L2 层，需要 MediaCodec 或 FFmpeg）
 
 完整规划见 [PLAN.md](PLAN.md)。
@@ -160,7 +160,7 @@ app                    组装、导航、AppGraph（唯一知道引擎实现的�
 
 ## 致谢
 
-「图片日记」的创意来自 [chenxiao-reverie/photo-diary](https://github.com/chenxiao-reverie/photo-diary)。本项目按功能重新实现（Compose + `android.graphics.Canvas`），未复制其代码，也未打包其 4.9MB 霞鹜文楷字体 —— 卡片文字使用系统衬线体。
+「图片日记」的创意与版式来自 [chenxiao-reverie/photo-diary](https://github.com/chenxiao-reverie/photo-diary)。本项目按功能重新实现（Compose + `android.graphics.Canvas`），未复制其网页代码；字体取自该项目所用的 6 套开源字库（霞鹜文楷 / 马善政 / 站酷快乐 / 龙藏 / 志莽 / 思源宋体），已按 GB2312 子集化后离线打包，随附各自许可。
 
 ---
 
